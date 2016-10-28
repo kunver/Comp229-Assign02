@@ -18,5 +18,10 @@ namespace Comp229_Assign02
         {
 
         }
+
+        protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
