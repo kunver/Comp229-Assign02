@@ -15,7 +15,9 @@ namespace Comp229_Assign02
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+        public static string Title = "Amazun";
 
+       
         protected void Page_Init(object sender, EventArgs e)
         {
             // The code below helps to protect against XSRF attacks
@@ -69,9 +71,9 @@ namespace Comp229_Assign02
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = string.Format("TEST TEST");
+            
         }
-
+   
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);

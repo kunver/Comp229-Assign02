@@ -4,7 +4,7 @@
 
     <div class="jumbotron">
         <h1>Amazun</h1>
-        <p class="lead">Amazun is a product like no other it will do its job so well it will be as if it hasn&#39;t done anything at all. </p>
+        <p class="lead">Amazun is a website devoted to maintaining customer satisfation through providing high quality web pages for its users.</p>
        
     </div>
 
@@ -12,7 +12,7 @@
         <div class="col-md-4">
             <h2>Take our Survey</h2>
                <p>
-                   By participating in our survey, you will help us improve our product when we develop later iterations of it!
+                   By participating in our survey, you will help us improve our pages when we develop later iterations of them!
                </p>   
                 <p>
                     <a class="btn btn-primary btn-lg" href="Survey.aspx">Take Survey</a>
