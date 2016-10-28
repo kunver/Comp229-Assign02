@@ -1,9 +1,7 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Survey.aspx.cs" Inherits="Comp229_Assign02.Contact" %>
 <%@ MasterType VirtualPath="~/Site.Master" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
-    <h3>Survey</h3>
-    <div>
+     
         <div>
             <h4>Please enter your Name</h4>
             <p><asp:TextBox ID="Namebox" runat="server" placeholder="Robert"></asp:TextBox>
@@ -19,7 +17,8 @@
                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
 
             </asp:RegularExpressionValidator></p>
-  
+  </div>
+        <div>
          <h4>How satisfied are you?</h4>
         <br />
         <asp:RadioButtonList ID="satisfied" runat="server" OnSelectedIndexChanged="satisfied_SelectedIndexChanged">
@@ -65,6 +64,6 @@
 
 
 
-    </div>
+ 
 
 </asp:Content>

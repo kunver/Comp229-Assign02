@@ -13,5 +13,10 @@ namespace Comp229_Assign02
         {
            
         }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            //keep this here till i find out where he wants me to redirect too
+            Response.Redirect("~/Amazun.aspx");
+        }
     }
 }

@@ -19,12 +19,14 @@ namespace Comp229_Assign02
 
         protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //if other is selected displays the box and label
             if (Improvement.SelectedValue == "Other")
             {
                 Improvlbl.Style.Add("display", "all");
                 ImprovBox.Style.Add("display", "all");
 
             }
+            //if other is not selected hides the box and label
             else
             {
                 Improvlbl.Style.Add("display", "none");
@@ -34,12 +36,14 @@ namespace Comp229_Assign02
 
         protected void satisfied_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //if other is selected displays the box and label
             if (satisfied.SelectedIndex == 4)
-            {
+            {           
                 Disatisfiedlbl.Style.Add("display", "all");
                 Disatisfiedbox.Style.Add("display", "all");
 
             }
+            //if other is not selected hides the box and label
             else
             {
                 Disatisfiedlbl.Style.Add("display", "none");

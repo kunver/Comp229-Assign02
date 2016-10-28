@@ -64,6 +64,8 @@
             <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Me, Myself, and I</p>
+                <p>*We are not resporsible or will beheld accountable for any misconceptions, inapropriate customer handling, supplier defects that are not from designated dealers.</p>
+                <p>*Any personal information obtained will not be used in any wild wild west movies starring Johhny Cash.</p>
             </footer>
         </div>
     </form>
