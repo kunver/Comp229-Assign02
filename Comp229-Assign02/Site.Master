@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
+    
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -42,7 +42,7 @@
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/Amazun">Amazun</a>
+                
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -50,7 +50,7 @@
                         <li><a runat="server" href="~/Survey">Survey</a></li>
                     </ul>
                     <div style ="text-align: center; color:#0000FF">
-                    <h2><%= Title %></h2>
+                   
                         </div>
              
                 </div>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,10 +11,36 @@ namespace Comp229_Assign02
 
     public partial class Contact : Page
     {
-       
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Title = "Survey Page";
+        }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+   
+            // from here
+            System.Configuration.Configuration saveddata = null;
+            if (System.Web.HttpContext.Current != null)
+            {
+                saveddata =
+                    System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("~");
+            }
+            else
+            {
+                saveddata =
+                    ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            }
+            // to here i need permission before handing in !
+            saveddata.AppSettings.Settings.Add("name", Namebox.Text);
+            saveddata.AppSettings.Settings.Add("email", EmailBox.Text);
+            saveddata.AppSettings.Settings.Add("satisfied", satisfied.SelectedValue);
+            saveddata.AppSettings.Settings.Add("dissatisfied", Disatisfiedbox.Text);
+            saveddata.AppSettings.Settings.Add("other", OtherInfo.Text);
+          
+
+            saveddata.Save(ConfigurationSaveMode.Modified);
             Response.Redirect("~/Thank You.aspx");
         }
 
