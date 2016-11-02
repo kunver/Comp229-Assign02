@@ -10,21 +10,21 @@ namespace Comp229_Assign02
 {
     public partial class About : Page
     {
-        
-        string name = ConfigurationManager.AppSettings["name"];
-         string email = ConfigurationManager.AppSettings["email"];
-        string satisfied = ConfigurationManager.AppSettings["satisfied"];
-         string dissatisfied = ConfigurationManager.AppSettings["dissatisfied"];
-         string other = ConfigurationManager.AppSettings["other"];
-
+   
 
         protected void Page_Load(object sender, EventArgs e)
         {
             Title = "Thank You";
+
+            string name = Session["Name"].ToString();
+            string email = Session["Email"].ToString();
+            string satisfied = Session["Satisfied"].ToString();
+            string other = Session["Other"].ToString();
+            
+    
             ListBox1.Items.Add(name);
             ListBox1.Items.Add(email);
-            ListBox1.Items.Add(satisfied);
-            ListBox1.Items.Add(dissatisfied);
+            ListBox1.Items.Add(satisfied);           
             ListBox1.Items.Add(other);
         }
         protected void Button1_Click(object sender, EventArgs e)

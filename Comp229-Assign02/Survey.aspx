@@ -6,38 +6,31 @@
     <h3>Survey</h3>
     <div>
         <div>
-            <h4>Please enter your Name</h4>
-            <p><asp:TextBox ID="Namebox" runat="server" placeholder="Robert"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" style="color:Red;"
+            <p><asp:TextBox ID="Namebox" runat="server" placeholder="Name"></asp:TextBox>
+                  <asp:RequiredFieldValidator ID="namerequired" runat="server" style="color:Red;"
                ControlToValidate="Namebox" ErrorMessage="Please enter your name" >
             </asp:RequiredFieldValidator>
-            </p>
-            <h4>Please enter your Email</h4>
            <p><asp:TextBox ID="EmailBox" runat="server" placeholder="Example@example.com"></asp:TextBox>
            
-             <asp:RegularExpressionValidator ID="emailvalid" runat="server" 
+             <asp:RegularExpressionValidator ID="emailrequired" runat="server" 
                ControlToValidate="EmailBox" ErrorMessage="Enter a valid email" style="color:Red;"
                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
-
             </asp:RegularExpressionValidator></p>
   
          <h4>How satisfied are you?</h4>
-        <asp:RadioButtonList ID="satisfied" runat="server" OnSelectedIndexChanged="satisfied_SelectedIndexChanged" AutoPostBack="True">
+        <asp:RadioButtonList ID="satisfied" runat="server" >
             <asp:ListItem>Very Satisfied</asp:ListItem>
             <asp:ListItem>Satisfied</asp:ListItem>
             <asp:ListItem>Not satisfied, Nor Dissatisfied</asp:ListItem>
             <asp:ListItem>Dissatified</asp:ListItem>
             <asp:ListItem>Very Dissatified</asp:ListItem>
         </asp:RadioButtonList>
-            <asp:RequiredFieldValidator ID="radioreq" runat="server" style="color:Red;"
-               ControlToValidate="satisfied" ErrorMessage="Please enter your level of satisfaction" >
+             <asp:RequiredFieldValidator ID="radiorequired" runat="server" style="color:Red;"
+               ControlToValidate="satisfied" ErrorMessage="Please enter your ssatisfaction" >
             </asp:RequiredFieldValidator>
-            <div>
-            <asp:Label ID="Disatisfiedlbl" runat="server" ForeColor="Red"  Text="Please Explain why you are so disatisfied" Style="display: none" ></asp:Label>
-            <br />
-            <asp:TextBox ID="Disatisfiedbox" runat="server" Height="34px" TextMode="MultiLine" Style="display: none"  Width="269px"></asp:TextBox>
+           
             </div>
-            <br />
+            
              <h4>What do you think we need to improve?</h4>
             <asp:CheckBoxList ID="Improvement" runat="server" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged">
                 <asp:ListItem>Page Content</asp:ListItem>
@@ -47,16 +40,15 @@
                 <asp:ListItem>Other</asp:ListItem>
             </asp:CheckBoxList>
             <asp:Label ID="Improvlbl" runat="server" ForeColor="Red" Text="Please Explain what else needs fixing." Style="display: none"></asp:Label>
-            <br />
-            <asp:TextBox ID="ImprovBox" runat="server" Height="34px" TextMode="MultiLine" Width="269px" Style="display: none"></asp:TextBox>
-
-
-
+            <div>
+   
+            <asp:TextBox ID="Improvbox" runat="server" Height="34px" TextMode="MultiLine" Style="display: none"  Width="269px"></asp:TextBox>
             
-            <h4>Please let us know anything you do not like about our product. </h4>
-            <br />
-            <asp:TextBox ID="OtherInfo" runat="server" Height="100px" Width="529px" placeholder="Max, 100 Characters" MaxLength="100" TextMode="MultiLine"></asp:TextBox>
+       
+                
+                     <asp:TextBox ID="OtherInfo" runat="server" Height="100px" Width="529px" placeholder="Any other comments/ concerns? " MaxLength="100" TextMode="MultiLine" AutoPostBack="True"></asp:TextBox>
               </div>
+        <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
        
 

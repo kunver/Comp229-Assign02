@@ -22,13 +22,13 @@ namespace Comp229_Assign02 {
         protected global::System.Web.UI.WebControls.TextBox Namebox;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// namerequired control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator namerequired;
         
         /// <summary>
         /// EmailBox control.
@@ -40,13 +40,13 @@ namespace Comp229_Assign02 {
         protected global::System.Web.UI.WebControls.TextBox EmailBox;
         
         /// <summary>
-        /// emailvalid control.
+        /// emailrequired control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator emailvalid;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator emailrequired;
         
         /// <summary>
         /// satisfied control.
@@ -58,31 +58,13 @@ namespace Comp229_Assign02 {
         protected global::System.Web.UI.WebControls.RadioButtonList satisfied;
         
         /// <summary>
-        /// radioreq control.
+        /// radiorequired control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator radioreq;
-        
-        /// <summary>
-        /// Disatisfiedlbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Disatisfiedlbl;
-        
-        /// <summary>
-        /// Disatisfiedbox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Disatisfiedbox;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator radiorequired;
         
         /// <summary>
         /// Improvement control.
@@ -103,13 +85,13 @@ namespace Comp229_Assign02 {
         protected global::System.Web.UI.WebControls.Label Improvlbl;
         
         /// <summary>
-        /// ImprovBox control.
+        /// Improvbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ImprovBox;
+        protected global::System.Web.UI.WebControls.TextBox Improvbox;
         
         /// <summary>
         /// OtherInfo control.

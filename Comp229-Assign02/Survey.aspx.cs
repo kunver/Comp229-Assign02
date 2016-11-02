@@ -19,28 +19,15 @@ namespace Comp229_Assign02
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-   
-            // from here
-            System.Configuration.Configuration saveddata = null;
-            if (System.Web.HttpContext.Current != null)
-            {
-                saveddata =
-                    System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("~");
-            }
-            else
-            {
-                saveddata =
-                    ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            }
-            // to here i need permission before handing in !
-            saveddata.AppSettings.Settings.Add("name", Namebox.Text);
-            saveddata.AppSettings.Settings.Add("email", EmailBox.Text);
-            saveddata.AppSettings.Settings.Add("satisfied", satisfied.SelectedValue);
-            saveddata.AppSettings.Settings.Add("dissatisfied", Disatisfiedbox.Text);
-            saveddata.AppSettings.Settings.Add("other", OtherInfo.Text);
-          
 
-            saveddata.Save(ConfigurationSaveMode.Modified);
+
+            Session["Name"] = Namebox.Text;
+            Session["Email"] = EmailBox.Text;
+            Session["Satisfied"] = satisfied.SelectedValue;
+            Session["Improve"] = Improvement.SelectedValue;
+
+            Session["Other"] = OtherInfo.Text;
+            
             Response.Redirect("~/Thank You.aspx");
         }
 
@@ -50,31 +37,14 @@ namespace Comp229_Assign02
             if (Improvement.SelectedValue == "Other")
             {
                 Improvlbl.Style.Add("display", "all");
-                ImprovBox.Style.Add("display", "all");
+                Improvlbl.Style.Add("display", "all");
 
             }
             //if other is not selected hides the box and label
             else
             {
                 Improvlbl.Style.Add("display", "none");
-                ImprovBox.Style.Add("display", "none");
-            }
-        }
-
-        protected void satisfied_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if other is selected displays the box and label
-            if (satisfied.SelectedIndex == 4)
-            {           
-                Disatisfiedlbl.Style.Add("display", "all");
-                Disatisfiedbox.Style.Add("display", "all");
-
-            }
-            //if other is not selected hides the box and label
-            else
-            {
-                Disatisfiedlbl.Style.Add("display", "none");
-                Disatisfiedbox.Style.Add("display", "none");
+                Improvlbl.Style.Add("display", "all");
             }
         }
 

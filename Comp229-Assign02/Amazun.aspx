@@ -1,10 +1,10 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Comp229_Assign02._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Amazun.aspx.cs" Inherits="Comp229_Assign02._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>Amazun</h1>
-        <p class="lead">Amazun is a website devoted to maintaining customer satisfation through providing high quality web pages for its users.</p>
+        <h1>Amazun, Goat Trader</h1>
+        <p class="lead">Amazun is a website to help those seeking a lovable goat or those who want to give a lovable goat to the world.</p>
        
     </div>
 
@@ -12,7 +12,7 @@
         <div class="col-md-4">
             <h2>Take our Survey</h2>
                <p>
-                   By participating in our survey, you will help us improve our pages when we develop later iterations of them!
+                   By participating in our survey, you will help us improve our pages for an easier goat transaction !
                </p>   
                 <p>
                     <a class="btn btn-primary btn-lg" href="Survey.aspx">Take Survey</a>
