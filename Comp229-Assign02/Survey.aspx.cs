@@ -11,43 +11,65 @@ namespace Comp229_Assign02
 
     public partial class Contact : Page
     {
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Changes title
             Title = "Survey Page";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string improveout = null;
+            //for each checkbox if its checked add the value to the ongoing string
+            for (int i = 0; i < 4; i++)
+            {
+                if (Improvement.Items[i].Selected == true)
+                {
 
-
+                    if (improveout == null)
+                    {
+                        improveout = Improvement.Items[i].Value;
+                    }
+                    else
+                    {
+                        improveout = improveout + ", " + Improvement.Items[i].Value;
+                    }
+                        
+                }
+            }
+            //adds variables to the session scope
             Session["Name"] = Namebox.Text;
             Session["Email"] = EmailBox.Text;
-            Session["Satisfied"] = satisfied.SelectedValue;
-            Session["Improve"] = Improvement.SelectedValue;
-
+            Session["Satisfied"] = satisfied.SelectedValue;            
             Session["Other"] = OtherInfo.Text;
-            
+            Session["Improve"] = improveout;
+            Session["improveCom"] = Improvbox.Text;
+
+            //redirects to thank you page
             Response.Redirect("~/Thank You.aspx");
         }
 
+
         protected void CheckBoxList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if other is selected displays the box and label
-            if (Improvement.SelectedValue == "Other")
-            {
-                Improvlbl.Style.Add("display", "all");
-                Improvlbl.Style.Add("display", "all");
+            
 
+            //if other is selected displays the box 
+            if (Improvement.Items[4].Selected == true)
+            {
+                Improvbox.Visible = true;
             }
-            //if other is not selected hides the box and label
+            //if other is not selected hides the box 
             else
             {
-                Improvlbl.Style.Add("display", "none");
-                Improvlbl.Style.Add("display", "all");
+                Improvbox.Visible = false;
             }
+
+
+
         }
 
-       
+
     }
 }

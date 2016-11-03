@@ -32,18 +32,19 @@
             </div>
             
              <h4>What do you think we need to improve?</h4>
-            <asp:CheckBoxList ID="Improvement" runat="server" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged">
+            <asp:CheckBoxList ID="Improvement" runat="server" AutoPostBack="True" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged" >
                 <asp:ListItem>Page Content</asp:ListItem>
                 <asp:ListItem>Page Layout</asp:ListItem>
                 <asp:ListItem>Responsiveness</asp:ListItem>
                 <asp:ListItem>Nebraska</asp:ListItem>
                 <asp:ListItem>Other</asp:ListItem>
             </asp:CheckBoxList>
-            <asp:Label ID="Improvlbl" runat="server" ForeColor="Red" Text="Please Explain what else needs fixing." Style="display: none"></asp:Label>
-            <div>
-   
-            <asp:TextBox ID="Improvbox" runat="server" Height="34px" TextMode="MultiLine" Style="display: none"  Width="269px"></asp:TextBox>
             
+            <div>  
+            <asp:TextBox ID="Improvbox" runat="server" Height="34px" TextMode="MultiLine"
+                placeholder="Please explain what else." visible="false" Width="529px"></asp:TextBox>
+                <br/>
+            <br/>
        
                 
                      <asp:TextBox ID="OtherInfo" runat="server" Height="100px" Width="529px" placeholder="Any other comments/ concerns? " MaxLength="100" TextMode="MultiLine" AutoPostBack="True"></asp:TextBox>

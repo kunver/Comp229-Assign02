@@ -9,7 +9,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h3>Thank You!</h3>
     <p>What you have submitted to us</p>
-    <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="Page_Load" Height="100px" Width="400px"></asp:ListBox>
+    <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="Page_Load" Height="178px" Width="527px"></asp:ListBox>
     
     <p>Your feedback is much appriciated for our development team.</p>
     <p>

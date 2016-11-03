@@ -14,38 +14,40 @@ namespace Comp229_Assign02
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //changes title
             Title = "Thank You";
 
+            //loads session variables to local variables
             string name = Session["Name"].ToString();
             string email = Session["Email"].ToString();
             string satisfied = Session["Satisfied"].ToString();
-            string other = Session["Other"].ToString();
-            
-    
+            string other = Session["Other"].ToString();           
+            string comments = Session["improveCom"].ToString();
+
+            //populates the listbox
             ListBox1.Items.Add(name);
             ListBox1.Items.Add(email);
-            ListBox1.Items.Add(satisfied);           
+            ListBox1.Items.Add(satisfied);
+            //if the session variable is there import it and put it in
+            if (Session["Improve"] != null)
+            {
+                string improvement = Session["Improve"].ToString();
+                ListBox1.Items.Add(improvement);
+            }         
+            //if the length of comments is geater than zero add comments to the list
+            if (comments.Length != 0)
+            { 
+                ListBox1.Items.Add(comments);
+            }
             ListBox1.Items.Add(other);
         }
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            //keep this here till i find out where he wants me to redirect too
-            Response.Redirect("~/Amazun.aspx");
-        }
 
-        protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        protected void ListBox1_SelectedIndexChanged1(object sender, EventArgs e)
-        {
-
-        }
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-          
+          //Clears the session and redirects to the home page
             Session.Abandon();
             Response.Redirect("~/Amazun.aspx");
         }

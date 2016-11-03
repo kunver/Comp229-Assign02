@@ -76,15 +76,6 @@ namespace Comp229_Assign02 {
         protected global::System.Web.UI.WebControls.CheckBoxList Improvement;
         
         /// <summary>
-        /// Improvlbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Improvlbl;
-        
-        /// <summary>
         /// Improvbox control.
         /// </summary>
         /// <remarks>
